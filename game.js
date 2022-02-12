@@ -26,17 +26,17 @@ export class Game extends Phaser.Scene {
 
         this.add.image(400, 250, 'background');
 
-        this.gameoverImage = this.add.image(400, 90, 'gameover');
+        this.gameoverImage = this.add.image(500, 100, 'gameover');
 
         this.gameoverImage.visible=false;
 
         this.Scoreboard.create();
 
-        this.platform=this.physics.add.image(400,460,'platform').setImmovable();
+        this.platform=this.physics.add.image(500,600,'platform').setImmovable();
 
         this.platform.body.allowGravity=false;
 
-        this.ball=this.physics.add.image(400,30,'ball');
+        this.ball=this.physics.add.image(500,30,'ball');
         this.ball.setCollideWorldBounds(true);
 
         let velocity = 100 * Phaser.Math.Between(1.3,2);
@@ -69,7 +69,7 @@ export class Game extends Phaser.Scene {
             this.platform.setVelocityX(0);
         }
 
-        if (this.ball.y > 500){
+        if (this.ball.y > 700){
             this.gameoverImage.visible=true;
             this.scene.pause();
         }

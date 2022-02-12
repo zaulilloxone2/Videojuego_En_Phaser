@@ -6,8 +6,8 @@ export class MobileControls {
     }
     
     create() {
-      this.leftButton = this.relatedScene.add.image(60, 320, 'leftbutton').setScale(1.3).setInteractive({ draggable: true });
-      this.rightButton = this.relatedScene.add.image(740, 320, 'rightbutton').setScale(1.3).setInteractive({ draggable: true });
+      this.leftButton = this.relatedScene.add.image(260, 320, 'leftbutton').setScale(1.3).setInteractive({ draggable: true });
+      this.rightButton = this.relatedScene.add.image(750, 320, 'rightbutton').setScale(1.3).setInteractive({ draggable: true });
   
       this.leftButton.on('pointerdown', () => {
         this.left.isDown = true;
